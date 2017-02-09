@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ruben.connecttomysql">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".farm.ListFarmsActivity" />
+        <activity android:name=".farm.DisplayFarmActivity" />
+        <activity android:name=".farm.EditFarmActivity" />
+        <activity android:name=".farm.CreateFarmActivity" />
+        <activity android:name=".plot.ListPlotsActivity" />
+        <activity android:name=".plot.DisplayPlotActivity" />
+        <activity android:name=".plot.EditPlotActivity" />
+        <activity android:name=".plot.CreatePlotActivity" />
+        <activity android:name=".climatologicalProbe.DisplayClimatologicalProbeActivity" />
+        <activity android:name=".climatologicalProbe.EditClimatologicalProbeActivity" />
+        <activity android:name=".WebViewClimaActivity" />
+        <activity android:name=".HistoricoActivity"/>
+        <activity android:name=".irrigation.IrrigationMenu"/>
+        <activity android:name=".irrigation.manual.ListManualActivity"/>
+        <activity android:name=".irrigation.manual.CreateManualActivity"/>
+        <activity android:name=".irrigation.manual.DisplayManualActivity"/>
+        <activity android:name=".irrigation.severalTimesSchedule.ListSeveralTimesScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesSchedule.DisplaySeveralTimesScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.ListSeveralTimesDayScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.DisplaySeveralTimesDayScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.momentDay.ListMomentDayActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.momentDay.CreateMomentDayActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.CreateSeveralTimesDayScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesSchedule.CreateSeveralTimesScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.momentDay.DisplayMomentDayActivity"/>
+        <activity android:name=".irrigation.severalTimesSchedule.EditSeveralTimesScheduleActivity"/>
+        <activity android:name=".irrigation.severalTimesDaySchedule.EditSeveralTimesDayScheduleActivity">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </activity>
+    </application>
+
+</manifest>

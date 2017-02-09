@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        revision="25.0.0"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-25.0.1-6b342b2068274c1f2390cfdb1bbfc697f3a0e576.jar" />
+    </item>
+    <item
+        jar="D:\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        revision="25.0.0"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.0.1-3621c7f6294c2ffb11cd504bdf2917d72ea61f0b.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b917332ed379bad3f24269e08ce17fbc16f13550.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2e9ce8d2caaaea395e2805d68784d1ddc5b3c869.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-443e82ac3afb0a467fbb1c606154c8d852930926.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-25.0.1-aca20ac6d9447acdac982b150806624901959fde.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        revision="25.0.0"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-25.0.1-0cf92571ccb545e76cbf428ff87168b0757672f7.jar" />
+    </item>
+    <item
+        jar="D:\sdk\platforms\android-25\optional\org.apache.http.legacy.jar"
+        revision="25.0.0"
+        sha1="3f13c050c692a10c3ef02d18104acd7c9fb6271d">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-10a6ef502533becb5224fcb52918fff567d301b2.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-55f3d762d48b6077a61a70e409299cc91ec54a87.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-df8ee979cd15c786ab4d2c6fa7e9663d7afff894.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-86a32ae73d26bb563b289b41e8efa4c1ed2e0f73.jar" />
+    </item>
+    <item
+        jar="C:\Users\ruben\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.2.4\7abd1ecef320da6a7679b137083151401fe8bf43\MPAndroidChart-v2.2.4.jar"
+        revision="25.0.0"
+        sha1="7abd1ecef320da6a7679b137083151401fe8bf43">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\MPAndroidChart-v2.2.4-0fba97b6ca56d0f9b4e90a453bf42919bdb30ba6.jar" />
+    </item>
+    <item
+        jar="D:\sdk\platforms\android-25\android.jar"
+        revision="25.0.0"
+        sha1="521e47459f279665cc697ca47f803cafc6a1244b">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-882d16336645229c9537deb620e0d1e779922b0b.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\libs\mysql-connector-java-5.1.40-bin.jar"
+        revision="25.0.0"
+        sha1="7c6a4b402a1f6106ffaf8a957004f30f57d9bdc7">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\mysql-connector-java-5.1.40-bin-a98ad280f642a1c0eb4e5aa6b62ac13435db7923.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-71f060724d64b68b8622ae5addfb640163effca8.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        revision="25.0.0"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-25.0.1-aea458fd0d64fc9941d32bfab384e2bc6b1f8fde.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d2784fbc562d415e8d29549f59e5e39c229dd271.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        revision="25.0.0"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-18eb5e86f11777d237d8249847977cbc51571344.jar" />
+    </item>
+    <item
+        jar="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        revision="25.0.0"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="D:\Descargas\Android\ConnectToMySQL\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-25.0.1-7925f5538808d046a6f4a39e8584f50a2d9fe6aa.jar" />
+    </item>
+
+</items>
