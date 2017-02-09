@@ -39,7 +39,5 @@ public class MD5 {
         return hexString.toString();
     }
 
-    // Comentario
 
-    //Holaaaaaa
 }
