@@ -80,7 +80,7 @@ public class Irrigation implements Serializable{
     }
 
     public String toString(){
-        String s= getName();
+        String s= getName() +" - "+ getTipoRiego();
         return s;
     }
 }
