@@ -14,15 +14,13 @@ public class IrrigationMomentDay implements Serializable{
     private Timestamp irrigationMoment;
     private Integer duration;
     private Integer idIrrigation;
-    private Integer idSeveralTimesDaysSchedule;
 
 
 
-    public IrrigationMomentDay(Integer id, Timestamp irrigationMoment, Integer duration, Integer idSeveralTimesDaysSchedule, Integer idIrrigation){
+    public IrrigationMomentDay(Integer id, Timestamp irrigationMoment, Integer duration, Integer idIrrigation){
         super();
         this.id = id;
         this.irrigationMoment = irrigationMoment;
-        this.idSeveralTimesDaysSchedule = idSeveralTimesDaysSchedule;
         this.duration = duration;
         this.idIrrigation = idIrrigation;
     }
@@ -41,13 +39,6 @@ public class IrrigationMomentDay implements Serializable{
 
     public void setIrrigationMoment(Timestamp irrigationMoment) {
         this.irrigationMoment = irrigationMoment;
-    }
-    public Integer getIdSeveralTimesDaysSchedule() {
-        return idSeveralTimesDaysSchedule;
-    }
-
-    public void setIdSeveralTimesDaysSchedule(Integer idSeveralTimesDaysSchedule) {
-        this.idSeveralTimesDaysSchedule = idSeveralTimesDaysSchedule;
     }
 
     public Integer getDuration() {

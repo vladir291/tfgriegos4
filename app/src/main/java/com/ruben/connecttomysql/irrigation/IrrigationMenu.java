@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.ruben.connecttomysql.irrigation.manual.ListManualActivity;
-import com.ruben.connecttomysql.irrigation.severalTimesDaySchedule.ListSeveralTimesDayScheduleActivity;
-import com.ruben.connecttomysql.irrigation.severalTimesSchedule.ListSeveralTimesScheduleActivity;
+import com.ruben.connecttomysql.irrigation.allDays.CreateAllDaysActivity;
+import com.ruben.connecttomysql.irrigation.manual.CreateManualActivity;
+import com.ruben.connecttomysql.irrigation.severalTimes.CreateSeveralTimesActivity;
 import com.ruben.connecttomysql.model.Plot;
 import com.ruben.connecttomysql.R;
 
@@ -29,8 +29,8 @@ public class IrrigationMenu extends AppCompatActivity {
 
 
         Button buttonManual = (Button) findViewById(R.id.button5);
-        Button buttonSeveral1 = (Button) findViewById(R.id.button6);
-        Button buttonSeveral2 = (Button) findViewById(R.id.button8);
+        Button buttonAllDays = (Button) findViewById(R.id.button6);
+        Button buttonSeveralTimes = (Button) findViewById(R.id.button8);
 
         Plot plot =(Plot) getIntent().getSerializableExtra("plot");
 
@@ -38,29 +38,29 @@ public class IrrigationMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent (IrrigationMenu.this, ListManualActivity.class);
+                Intent intent = new Intent (IrrigationMenu.this, CreateManualActivity.class);
                 intent.putExtra("plot", plot);
                 startActivity(intent);
 
             }
         });
 
-        buttonSeveral1.setOnClickListener(new View.OnClickListener() {
+        buttonAllDays.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent (IrrigationMenu.this, ListSeveralTimesScheduleActivity.class);
+                Intent intent = new Intent (IrrigationMenu.this, CreateAllDaysActivity.class);
                 intent.putExtra("plot", plot);
                 startActivity(intent);
 
             }
         });
 
-        buttonSeveral2.setOnClickListener(new View.OnClickListener() {
+        buttonSeveralTimes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent (IrrigationMenu.this, ListSeveralTimesDayScheduleActivity.class);
+                Intent intent = new Intent (IrrigationMenu.this, CreateSeveralTimesActivity.class);
                 intent.putExtra("plot", plot);
                 startActivity(intent);
 

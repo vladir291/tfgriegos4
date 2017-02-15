@@ -11,12 +11,16 @@ import android.widget.EditText;
 
 import com.ruben.connecttomysql.ConnectionUtils;
 import com.ruben.connecttomysql.R;
+import com.ruben.connecttomysql.irrigation.ListIrrigationActivity;
 import com.ruben.connecttomysql.model.Plot;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,7 +28,6 @@ import java.util.List;
 public class CreateManualActivity extends AppCompatActivity {
     // Declaramos los elementos
     private EditText nombreEt;
-    private EditText fechaEt;
     private EditText duracionEt;
 
     @Override
@@ -52,7 +55,9 @@ public class CreateManualActivity extends AppCompatActivity {
     private class CreateManual extends AsyncTask<Void,Void,Void> {
         private String nombre="";
         private Integer duracion=0;
-        private Date fechaInicio = new Date(System.currentTimeMillis());
+        private Timestamp fechaInicio = new Timestamp(System.currentTimeMillis());
+        private Timestamp fechaFin = new Timestamp(System.currentTimeMillis());
+        private String tipoRiego = "MANUAL";
 
         Plot plot =(Plot) getIntent().getSerializableExtra("plot");
 
@@ -73,8 +78,7 @@ public class CreateManualActivity extends AppCompatActivity {
                         //Obtenemos el texto de los campos que ha introducido el usuario
                         nombre = nombreEt.getText().toString();
                         duracion = Integer.parseInt(duracionEt.getText().toString());
-
-
+                        fechaFin = new Timestamp(fechaInicio.getTime()+(duracion*60000));
 
 
 
@@ -92,7 +96,7 @@ public class CreateManualActivity extends AppCompatActivity {
 
                     //Log.d("Debug", "Antes de la consulta el usuario: " + nomEditText);
                     //Log.d("Debug", "Nombre: " +nombre +" latitud: "+latitud+ " longitud: "+longitud);
-                    String sql = "insert into IRRIGATION (cancelMoment,id_plot,name) VALUES ("+null+","+plot.getId()+",'"+nombre+"')";
+                    String sql = "insert into IRRIGATION (name,cancelMoment,startDate, endDate,tipo_riego,id_plot) VALUES ('"+nombre+"',"+null+",'"+fechaInicio+"','"+fechaFin+"','"+tipoRiego+"',"+plot.getId()+")";
                     //Realizamos la consulta contra la base de datos
                     st.executeUpdate(sql);
 
@@ -109,9 +113,8 @@ public class CreateManualActivity extends AppCompatActivity {
                     Log.d("Debug", "Antes de la consulta el usuario: " + lastIdInt);
 
                     //Parseamos la fecha para poder introducirlo en la BD
-                    java.sql.Timestamp fechaInicioDB = new java.sql.Timestamp(fechaInicio.getTime());
 
-                    String sql2 = "insert into MANUAL (startDate,duration,id_irrigation) VALUES ('"+fechaInicioDB+"',"+duracion+","+lastIdInt+")";
+                    String sql2 = "insert into IRRIGATIONMOMENTDAY (irrigationMoment,duration,id_irrigation) VALUES ('"+fechaInicio+"',"+duracion+","+lastIdInt+")";
 
                     st.executeUpdate(sql2);
 
@@ -138,7 +141,7 @@ public class CreateManualActivity extends AppCompatActivity {
                 return;
             }else{
                 // Si ha ido correctamente lo llevamos a la nueva ventana
-                Intent intent = new Intent (CreateManualActivity.this, ListManualActivity.class);
+                Intent intent = new Intent (CreateManualActivity.this, ListIrrigationActivity.class);
 
                 intent.putExtra("plot", plot);
                 startActivity(intent);

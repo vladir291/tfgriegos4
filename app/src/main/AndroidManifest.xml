@@ -30,20 +30,17 @@
         <activity android:name=".WebViewClimaActivity" />
         <activity android:name=".HistoricoActivity"/>
         <activity android:name=".irrigation.IrrigationMenu"/>
-        <activity android:name=".irrigation.manual.ListManualActivity"/>
+        <activity android:name=".irrigation.ListIrrigationActivity"/>
         <activity android:name=".irrigation.manual.CreateManualActivity"/>
         <activity android:name=".irrigation.manual.DisplayManualActivity"/>
-        <activity android:name=".irrigation.severalTimesSchedule.ListSeveralTimesScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesSchedule.DisplaySeveralTimesScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.ListSeveralTimesDayScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.DisplaySeveralTimesDayScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.momentDay.ListMomentDayActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.momentDay.CreateMomentDayActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.CreateSeveralTimesDayScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesSchedule.CreateSeveralTimesScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.momentDay.DisplayMomentDayActivity"/>
-        <activity android:name=".irrigation.severalTimesSchedule.EditSeveralTimesScheduleActivity"/>
-        <activity android:name=".irrigation.severalTimesDaySchedule.EditSeveralTimesDayScheduleActivity">
+        <activity android:name=".irrigation.allDays.DisplayAllDaysActivity"/>
+        <activity android:name=".irrigation.severalTimes.DisplaySeveralTimesActivity"/>
+        <activity android:name=".irrigation.severalTimes.momentDay.ListMomentDayActivity"/>
+        <activity android:name=".irrigation.severalTimes.momentDay.CreateMomentDayActivity"/>
+        <activity android:name=".irrigation.severalTimes.CreateSeveralTimesActivity"/>
+        <activity android:name=".irrigation.allDays.CreateAllDaysActivity"/>
+        <activity android:name=".irrigation.severalTimes.momentDay.DisplayMomentDayActivity"/>
+        <activity android:name=".irrigation.severalTimes.EditSeveralTimesActivity">
 
 
 

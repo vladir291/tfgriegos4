@@ -12,6 +12,7 @@ import com.ruben.connecttomysql.HistoricoActivity;
 import com.ruben.connecttomysql.R;
 import com.ruben.connecttomysql.climatologicalProbe.DisplayClimatologicalProbeActivity;
 import com.ruben.connecttomysql.irrigation.IrrigationMenu;
+import com.ruben.connecttomysql.irrigation.ListIrrigationActivity;
 import com.ruben.connecttomysql.model.Plot;
 
 public class DisplayPlotActivity extends AppCompatActivity {
@@ -88,7 +89,7 @@ public class DisplayPlotActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(DisplayPlotActivity.this, IrrigationMenu.class);
+                Intent intent = new Intent(DisplayPlotActivity.this, ListIrrigationActivity.class);
                 intent.putExtra("plot", plot);
                 startActivity(intent);
             }

@@ -1,4 +1,4 @@
-package com.ruben.connecttomysql.irrigation.severalTimesDaySchedule.momentDay;
+package com.ruben.connecttomysql.irrigation.severalTimes.momentDay;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -53,7 +53,6 @@ public class CreateMomentDayActivity extends AppCompatActivity {
         private Timestamp fecha;
 
 
-        Integer idSeveralTimesDaysSchedule =(Integer) getIntent().getSerializableExtra("idSeveralTimesDaysSchedule");
         Integer idIrrigation =(Integer) getIntent().getSerializableExtra("idIrrigation");
 
         @Override
@@ -104,7 +103,7 @@ public class CreateMomentDayActivity extends AppCompatActivity {
                     ConnectionUtils.setStatement(st);
 
                     //Log.d("Debug", "Antes de la consulta el usuario: " + nomEditText);
-                    String sql = "insert into IRRIGATIONMOMENTDAY (irrigationMoment,duration,id_severalTimesDaySchedule ) VALUES ('"+fecha+"',"+duracion+",'"+idSeveralTimesDaysSchedule+"')";
+                    String sql = "insert into IRRIGATIONMOMENTDAY (irrigationMoment,duration,id_irrigation ) VALUES ('"+fecha+"',"+duracion+",'"+idIrrigation+"')";
                     //Realizamos la consulta contra la base de datos
                     st.executeUpdate(sql);
 

@@ -1,4 +1,4 @@
-package com.ruben.connecttomysql.irrigation.severalTimesDaySchedule.momentDay;
+package com.ruben.connecttomysql.irrigation.severalTimes.momentDay;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -31,7 +31,6 @@ public class ListMomentDayActivity extends AppCompatActivity {
     private Timestamp irrigationMoment;
     private Integer duration;
     private Integer idIrrigation;
-    private Integer idSeveralTimesDaysSchedule;
 
 
     @Override
@@ -63,7 +62,7 @@ public class ListMomentDayActivity extends AppCompatActivity {
 
             //String sql = "select * from IRRIGATIONMOMENTDAY where id_severalTimesDaySchedule ="+idIrrigation;
 
-            String sql = "select * from IRRIGATIONMOMENTDAY where id_severalTimesDaySchedule =  (select id from SEVERALTIMESDAYSCHEDULE where id_irrigation ="+idIrrigation+ ")";
+            String sql = "select * from IRRIGATIONMOMENTDAY where id_irrigation ="+idIrrigation+ ")";
             //Realizamos la consulta contra la base de datos
             final ResultSet rs = st.executeQuery(sql);
 
@@ -74,8 +73,7 @@ public class ListMomentDayActivity extends AppCompatActivity {
                 id = rs.getInt(1);
                 irrigationMoment = rs.getTimestamp(3);
                 duration = rs.getInt(4);
-                idSeveralTimesDaysSchedule = rs.getInt(5);
-                riego = new IrrigationMomentDay(id, irrigationMoment, duration, idSeveralTimesDaysSchedule, idIrrigation);
+                riego = new IrrigationMomentDay(id, irrigationMoment, duration, idIrrigation);
                 //Log.d("Debug", "Nombre: " + name +" longitud: "+longitude.toString()+" latitude: "+latitude.toString());
 
                 riegos.add(riego);
@@ -116,7 +114,6 @@ public class ListMomentDayActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (ListMomentDayActivity.this, CreateMomentDayActivity.class);
-                intent.putExtra("idSeveralTimesDaysSchedule", idSeveralTimesDaysSchedule);
                 intent.putExtra("idIrrigation", idIrrigation);
                 startActivity(intent);
 

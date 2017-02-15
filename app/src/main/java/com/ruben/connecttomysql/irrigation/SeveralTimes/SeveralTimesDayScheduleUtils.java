@@ -1,4 +1,4 @@
-package com.ruben.connecttomysql.irrigation.severalTimesDaySchedule;
+package com.ruben.connecttomysql.irrigation.severalTimes;
 
 import android.app.Activity;
 import android.widget.EditText;

@@ -1,4 +1,4 @@
-package com.ruben.connecttomysql.irrigation.severalTimesDaySchedule.momentDay;
+package com.ruben.connecttomysql.irrigation.severalTimes.momentDay;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

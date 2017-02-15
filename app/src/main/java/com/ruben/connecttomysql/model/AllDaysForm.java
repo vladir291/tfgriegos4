@@ -8,25 +8,32 @@ import java.util.Date;
  * Created by ruben on 19/12/2016.
  */
 @SuppressWarnings("serial")
-public class SeveralTimesSchedule extends Irrigation implements Serializable{
+public class AllDaysForm implements Serializable{
+    private String name;
     private Timestamp startDate;
     private Timestamp endDate;
     private Integer hours;
     private Integer minutes;
     private Integer duration;
 
-
-    public SeveralTimesSchedule(Integer id, String name, Timestamp cancelMoment, Timestamp startDate, Timestamp endDate, Integer hours, Integer minutes, Integer duration){
+    public AllDaysForm(String name, Timestamp startDate, Timestamp endDate, Integer hours, Integer minutes, Integer duration){
         super();
-        this.setId(id);
-        this.setName(name);
-        this.setCancelMoment(cancelMoment);
+        this.name= name;
         this.startDate = startDate;
         this.endDate = endDate;
+
         this.hours = hours;
         this.minutes = minutes;
         this.duration = duration;
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getStartDate() {

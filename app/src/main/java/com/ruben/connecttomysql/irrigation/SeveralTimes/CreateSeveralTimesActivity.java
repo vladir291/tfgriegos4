@@ -1,4 +1,4 @@
-package com.ruben.connecttomysql.irrigation.severalTimesSchedule;
+package com.ruben.connecttomysql.irrigation.severalTimes;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -9,8 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.ruben.connecttomysql.ConnectionUtils;
-import com.ruben.connecttomysql.R;
+import com.ruben.connecttomysql.irrigation.ListIrrigationActivity;
 import com.ruben.connecttomysql.model.Plot;
+import com.ruben.connecttomysql.R;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,34 +24,28 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
+public class CreateSeveralTimesActivity extends AppCompatActivity {
     // Declaramos los elementos
     private EditText nombreEt;
-    private EditText duracionEt;
     private EditText inicioEt;
     private EditText finEt;
-    private EditText horaEt;
-    private EditText minutoEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_several_times_schedule);
+        setContentView(R.layout.activity_edit_several_times);
 
         //Instanciamos los elementos
         nombreEt = (EditText) findViewById(R.id.editText1);
-        duracionEt = (EditText) findViewById(R.id.editText2);
-        inicioEt = (EditText) findViewById(R.id.editText6);
-        finEt = (EditText) findViewById(R.id.editText7);
-        horaEt = (EditText) findViewById(R.id.editText8);
-        minutoEt = (EditText) findViewById(R.id.editText9);
+        inicioEt = (EditText) findViewById(R.id.editText10);
+        finEt = (EditText) findViewById(R.id.editText11);
 
         Button buttonAceptar = (Button) findViewById(R.id.button3);
         //Definimos el comportamiento del boton aceptar
         buttonAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new CreateSeveralTimesScheduleActivity.CreateSeveralTimesSchedule().execute();
+                new CreateSeveralTimesActivity.CreateSeveralTimesDaySchedule().execute();
             }
         });
 
@@ -58,13 +53,11 @@ public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
 
 
     // Ejecutamos de forma asincrona, las acciones del boton aceptar
-    private class CreateSeveralTimesSchedule extends AsyncTask<Void,Void,Void> {
+    private class CreateSeveralTimesDaySchedule extends AsyncTask<Void,Void,Void> {
         private String nombre="";
-        private Integer duracion=0;
         private Date fechaInicio = new Date(System.currentTimeMillis());
         private Date fechaFin = new Date(System.currentTimeMillis()+1000000);
-        private Integer hora=0;
-        private Integer minuto=0;
+        private String tipoRiego = "SEVERALTIMES";
 
 
         Plot plot =(Plot) getIntent().getSerializableExtra("plot");
@@ -85,8 +78,6 @@ public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
 
                         //Obtenemos el texto de los campos que ha introducido el usuario
                         nombre = nombreEt.getText().toString();
-                        duracion = Integer.parseInt(duracionEt.getText().toString());
-
 
                         if(!inicioEt.getText().toString().isEmpty()){
                             SimpleDateFormat dateFormat = new SimpleDateFormat(
@@ -120,8 +111,7 @@ public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
 
                         }
 
-                        hora = Integer.parseInt(horaEt.getText().toString());
-                        minuto = Integer.parseInt(minutoEt.getText().toString());
+
 
 
 
@@ -132,7 +122,7 @@ public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
                     }
                 });
 
-                errores = SeveralTimesScheduleUtils.compruebaErrores(CreateSeveralTimesScheduleActivity.this);
+                errores = SeveralTimesDayScheduleUtils.compruebaErrores(CreateSeveralTimesActivity.this);
                 if(errores.size()==0){
                     Statement st = con.createStatement();
 
@@ -141,26 +131,9 @@ public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
 
                     //Log.d("Debug", "Antes de la consulta el usuario: " + nomEditText);
                     //Log.d("Debug", "Nombre: " +nombre +" latitud: "+latitud+ " longitud: "+longitud);
-                    String sql = "insert into IRRIGATION (cancelMoment,id_plot,name) VALUES ("+null+","+plot.getId()+",'"+nombre+"')";
+                    String sql = "insert into IRRIGATION (name,cancelMoment,startDate, endDate,tipo_riego,id_plot) VALUES ('"+nombre+"',"+null+",'"+fechaInicio+"','"+fechaFin+"','"+tipoRiego+"',"+plot.getId()+")";
                     //Realizamos la consulta contra la base de datos
                     st.executeUpdate(sql);
-
-                    ResultSet rs = st.executeQuery("select last_insert_id() as last_id from IRRIGATION");
-
-                    Integer lastIdInt;
-
-                    if (rs.next()) {
-                        String lastid = rs.getString("last_id");
-                        lastIdInt= Integer.parseInt(lastid);
-                    }else{
-                        lastIdInt=0;
-                    }
-                    String sql2 = "insert into SEVERALTIMESSCHEDULE (startDate,endDate,hours,minutes,duration,id_irrigation) VALUES ('"+fechaInicio+"','"+fechaFin+"',"+hora+","+minuto+","+duracion+","+lastIdInt+")";
-
-                    st.executeUpdate(sql2);
-
-
-
                 }
 
             }catch(Exception e){
@@ -174,15 +147,15 @@ public class CreateSeveralTimesScheduleActivity extends AppCompatActivity {
             List<String> errores;
 
             // Comprobamos y visualizamos los errores en caso de que fuera necesario
-            errores = SeveralTimesScheduleUtils.compruebaErrores(CreateSeveralTimesScheduleActivity.this);
-            SeveralTimesScheduleUtils.visualizaErrores(CreateSeveralTimesScheduleActivity.this,errores);
+            errores = SeveralTimesDayScheduleUtils.compruebaErrores(CreateSeveralTimesActivity.this);
+            SeveralTimesDayScheduleUtils.visualizaErrores(CreateSeveralTimesActivity.this,errores);
 
 
             if(errores.size()>0){
                 return;
             }else{
                 // Si ha ido correctamente lo llevamos a la nueva ventana
-                Intent intent = new Intent (CreateSeveralTimesScheduleActivity.this, ListSeveralTimesScheduleActivity.class);
+                Intent intent = new Intent (CreateSeveralTimesActivity.this, ListIrrigationActivity.class);
 
                 intent.putExtra("plot", plot);
                 startActivity(intent);
